@@ -5,8 +5,8 @@ Plugin URI: http://canyonco.org/
 Description: Canyon County Current Arrest Wordpress plugin
 Version: 1.0
 Author: kwilcox
-Author URI: http://canyonco.org/
-License: WTFPL
+Author URI: http://api.canyonco.org/
+License: MIT
 */
 
 /* GLOBAL FUNCTIONS - Move to Include File */
@@ -63,7 +63,7 @@ function cc_draw_current_arrest_row($row) {
 function cc_current_arrest_func($atts) {
 	ob_start();
 	cc_debug("Current Arrest -> 0");
-	$ret = wp_remote_get( 'http://secret.canyonco.org/Sheriff/CurrentArrest' );
+	$ret = wp_remote_get( 'http://api.canyonco.org/Sheriff/CurrentArrest' );
 	if ($ret[response][code] === 200)
 	{
 		
