@@ -2,7 +2,7 @@
 Contributors: kenwilcox
 Requires at least: 3.9.1
 Tested up to: 3.9.1
-License: GPLv3
+License: MIT
 
 A simple example of how to use the REST service for Current Arrests
 
